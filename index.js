@@ -12,6 +12,9 @@ client.on("message", (message) => {
 });
 
 
+client.login("BOT_TOKEN");
+
+
 client.on("message", async message => {
       if(message.author.bot) return;
       if(message.channel.type === "dm") return;
@@ -175,4 +178,3 @@ client.on('ready', function(){
   });
 });
 
-client.login("NDA4NjM1ODU5ODI3NTU2MzUy.DmJqAw.Tw3FbZP9d-UdJ1QBydSOmKCfjzg");
