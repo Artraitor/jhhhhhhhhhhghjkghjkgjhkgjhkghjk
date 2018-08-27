@@ -197,7 +197,7 @@ client.on('ready', function(){
 client.on("guildMemberAdd", function(member) {
     const wc = member.guild.channels.find("name", "member-log")
         const embed = new Discord.RichEmbed()
-        .setColor('#f442a7')
+        .setColor('f442a7')
         .setAuthor(member.user.tag, member.user.avatarURL)
  .setDescription('*** a minion has spawned ***')
 .setThumbnail(member.avatarURL)
