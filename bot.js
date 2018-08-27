@@ -194,5 +194,17 @@ client.on('ready', function(){
 });
 
 
+client.on("guildMemberAdd", function(member) {
+    const wc = member.guild.channels.find("name", "member-log")
+        const embed = new Discord.RichEmbed()
+        .setColor('B90C0C')
+        .setAuthor(member.user.tag, member.user.avatarURL)
+ .setDescription('*** a minion has spawned ***')
+.setThumbnail(member.avatarURL)
+  .setImage('https://i.imgur.com/BRyCeep.gif')
+        .setTimestamp()
+        return wc.sendEmbed(embed);
+        
+});
 
 client.login(process.env.BOT_TOKEN);
